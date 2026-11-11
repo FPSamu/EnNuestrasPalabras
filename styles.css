@@ -1,0 +1,124 @@
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html,
+body {
+  height: 100%;
+}
+
+body {
+  background: #1b1b1b;
+  color: #fff;
+  font-family: "Oswald", "Arial Narrow", sans-serif;
+  overflow-x: hidden;
+}
+
+.scene {
+  min-height: 100vh;
+  min-height: 100svh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  padding-bottom: 5vh;
+  /* Luz tenue que cae del foco */
+  background: radial-gradient(
+    ellipse 55% 45% at 50% 32%,
+    rgba(255, 255, 255, 0.06),
+    transparent 70%
+  );
+}
+
+/* ---------- Foco ---------- */
+.lamp {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  transform-origin: top center;
+  animation: sway 6s ease-in-out infinite;
+}
+
+.cord {
+  width: 3px;
+  height: 15vh;
+  background: #050505;
+}
+
+.socket {
+  width: 34px;
+  height: 36px;
+  background: linear-gradient(90deg, #0a0a0a, #2a2a2a 45%, #0a0a0a);
+  border-radius: 5px 5px 3px 3px;
+  position: relative;
+  z-index: 2;
+}
+
+.socket::after {
+  /* aro dorado */
+  content: "";
+  position: absolute;
+  left: 2px;
+  right: 2px;
+  bottom: -3px;
+  height: 4px;
+  background: #8a6a2c;
+  border-radius: 2px;
+}
+
+.bulb {
+  width: 76px;
+  height: 88px;
+  margin-top: -2px;
+  background: radial-gradient(circle at 50% 45%, #fff 55%, #f1f1f1 100%);
+  border-radius: 46% 46% 50% 50% / 38% 38% 62% 62%;
+  box-shadow:
+    0 0 25px 8px rgba(255, 255, 255, 0.55),
+    0 0 70px 30px rgba(255, 255, 255, 0.22),
+    0 0 160px 70px rgba(255, 255, 255, 0.07);
+  animation: flicker 7s infinite;
+}
+
+/* ---------- Texto ---------- */
+.title {
+  font-weight: 400;
+  font-size: min(11vw, 6rem, 10vh);
+  line-height: 1.02;
+  letter-spacing: 0.01em;
+  text-align: center;
+  text-transform: uppercase;
+  margin-top: 4vh;
+}
+
+/* ---------- Sillón ---------- */
+.chair {
+  width: min(230px, 40vw, 28vh);
+  height: auto;
+  margin-top: 4vh;
+  filter: drop-shadow(0 18px 18px rgba(0, 0, 0, 0.45));
+}
+
+/* ---------- Animaciones ---------- */
+@keyframes sway {
+  0%, 100% { transform: rotate(0.6deg); }
+  50% { transform: rotate(-0.6deg); }
+}
+
+@keyframes flicker {
+  0%, 92%, 100% { opacity: 1; }
+  93% { opacity: 0.6; }
+  94% { opacity: 1; }
+  96% { opacity: 0.75; }
+  97% { opacity: 1; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .lamp,
+  .bulb {
+    animation: none;
+  }
+}
