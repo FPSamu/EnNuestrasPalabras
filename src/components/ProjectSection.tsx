@@ -25,7 +25,7 @@ export default function ProjectSection() {
               construyen y se representan las identidades de las mujeres latinoamericanas.
             </p>
 
-            <p className="mt-10 text-justify text-2xl leading-tight tracking-[-0.03em] sm:text-3xl">
+            <p className="mt-10 text-center text-2xl sm:text-justify leading-tight tracking-[-0.03em] sm:text-3xl">
               Palabras clave: Lenguaje, reflexión, comunidad, mujeres, diversidad, experiencias, política,
               arte, expresión, alternativo, literatura.
             </p>

@@ -4,11 +4,11 @@ export default function QuestionSection() {
       {/* Manchas de degradado rosa: arriba a la derecha y abajo a la izquierda */}
       <div
         aria-hidden
-        className="pointer-events-none absolute -top-80 -right-48 size-[44rem] rounded-full bg-[radial-gradient(circle,rgba(240,180,205,0.4)_0%,rgba(255,255,255,0)_70%)]"
+        className="pointer-events-none absolute -top-24 -right-28 size-72 sm:-top-48 sm:-right-40 sm:size-[32rem] lg:-top-80 lg:-right-48 lg:size-[44rem] rounded-full bg-[radial-gradient(circle,rgba(240,180,205,0.4)_0%,rgba(255,255,255,0)_70%)]"
       />
       <div
         aria-hidden
-        className="pointer-events-none absolute -bottom-40 -left-48 size-[40rem] rounded-full bg-[radial-gradient(circle,rgba(240,180,205,0.45)_0%,rgba(255,255,255,0)_70%)]"
+        className="pointer-events-none absolute -bottom-16 -left-28 size-72 sm:-bottom-32 sm:-left-40 sm:size-[30rem] lg:-bottom-40 lg:-left-48 lg:size-[40rem] rounded-full bg-[radial-gradient(circle,rgba(240,180,205,0.45)_0%,rgba(255,255,255,0)_70%)]"
       />
 
       <div className="relative mx-auto max-w-4xl text-center text-neutral-900">

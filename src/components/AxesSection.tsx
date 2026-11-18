@@ -1,4 +1,4 @@
-import { StarCluster } from "@/components/Stars";
+import { StarCluster, axesRightStars, miniStars } from "@/components/Stars";
 
 const axes = [
   { name: "Voces", description: "Testimonios, experiencias y reflexiones en primera persona." },
@@ -20,23 +20,14 @@ const axes = [
   },
 ];
 
-const rightStars = [
-  { top: "52%", left: "95.5%", size: 75, rotate: 10 },
-  { top: "55%", left: "98%", size: 75, rotate: -12 },
-  { top: "58%", left: "94.5%", size: 75, rotate: 18, dark: true },
-  { top: "62%", left: "93.5%", size: 75, rotate: -6 },
-  { top: "68%", left: "96.5%", size: 75, rotate: 14 },
-  { top: "71%", left: "94.5%", size: 75, rotate: -20, dark: true },
-  { top: "76%", left: "88%", size: 75, rotate: 8, hideMobile: true },
-  { top: "80%", left: "87%", size: 75, rotate: -15, hideMobile: true },
-  { top: "82%", left: "92%", size: 75, rotate: 20, dark: true, hideMobile: true },
-  { top: "83%", left: "96.5%", size: 75, rotate: -4, hideMobile: true },
-];
-
 export default function AxesSection() {
   return (
     <section id="ejes" className="relative px-4 py-24 sm:px-8 lg:py-32">
-      <StarCluster stars={rightStars} />
+      <StarCluster stars={miniStars} className="right-2 bottom-4 aspect-square w-16 sm:hidden" />
+      <StarCluster
+        stars={axesRightStars}
+        className="top-1/2 right-0 hidden aspect-[2/5] w-24 sm:block md:w-32 lg:w-[12.5rem]"
+      />
 
       <div className="relative z-10 mx-auto max-w-6xl">
         <h2 className="text-center text-5xl font-bold tracking-[-0.06em] text-vino sm:text-6xl">

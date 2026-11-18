@@ -1,19 +1,14 @@
 import Image from "next/image";
-import { StarCluster } from "@/components/Stars";
-
-const leftStars = [
-  { top: "48%", left: "2%", size: 75, rotate: -10 },
-  { top: "46%", left: "5.5%", size: 75, rotate: 12 },
-  { top: "55%", left: "5.5%", size: 75, rotate: 20, dark: true },
-  { top: "61%", left: "6%", size: 75, rotate: -6 },
-  { top: "67%", left: "1.8%", size: 75, rotate: 14 },
-  { top: "72%", left: "4%", size: 75, rotate: -18, dark: true },
-];
+import { StarCluster, manifestoLeftStars, miniStars } from "@/components/Stars";
 
 export default function ManifestoSection() {
   return (
     <section id="manifiesto" className="relative scroll-mt-28 px-4 py-24 sm:px-8 lg:py-32">
-      <StarCluster stars={leftStars} />
+      <StarCluster stars={miniStars} className="top-6 left-2 aspect-square w-14 sm:hidden" />
+      <StarCluster
+        stars={manifestoLeftStars}
+        className="top-[46%] left-[1.8%] hidden aspect-[2/5] w-20 sm:block md:w-28 lg:w-[10.5rem]"
+      />
 
       <div className="relative z-10 mx-auto max-w-6xl">
         <h2 className="text-center text-5xl font-bold tracking-[-0.06em] text-vino sm:text-6xl">Manifiesto</h2>
